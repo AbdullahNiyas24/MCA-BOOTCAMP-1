@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            #studentData {
+                border: 2px solid red;
+            }
+            #studentData th, #studentData td {
+                border: 2px solid blue;
+                padding: 10px;
+            }
+            table th, table td {
+                background-color: yellow;
+            }
+        div {
+            height: 260px;
+            width: 1000px;
+            display: flex;
+        }
+        h1 {
+            padding: 0%;
+            margin-left: 40%;
+        }
+        a {
+            color: rgb(0, 6, 10);
+        }
+        h2 {
+            color: blue;
+        }
+        .box {
+            color: rgb(27, 46, 46);
+            text-align: center;
+        }
+        .para1 {
+            background-color: aqua;
+        }
+        #para2 {
+            background-color: yellow;
+        }
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: aqua;
+            padding: 20px;
+            font-size: large;
+            text-decoration: none;
+            list-style-type: none;  
+        }
+        ul :hover{
+            background-color: rgb(188, 15, 15);
+        }
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        header ul li>a {
+            text-decoration: none;
+        }
+        header{
+            color: black;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            
+        }
+        #para3 {
+            display: block;
+            margin-left: 50px;
+        }
+        table :hover{
+            background-color: blue;
+        }
+        .footer1 {
+            display: flex;
+        }
+        
+    </style>
+</head> 
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Admission</a></li>
+                <li><a href="#">Placements</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="https://www.kristujayanti.edu.in/images/new-banners/vision-mission.jpg" alt="" height="500px" width="1350px">
+    <h2 class="box"> LIGHT AND PROSPERITY </h2><hr><br>
+    <h2>KRISTU JAYANTI (DEEMED TO BE UNIVERSITY)</h2>
+    <p class="para1">Kristu Jayanti (Deemed to be) University , [1] or Kristu Jayanti University founded in the year 1999, managed by "Bodhi Niketan Trust", formed by the members of St. Joseph Province of the Carmelites of Mary Immaculate. The college is recognized by UGC under the category 2(f) & 12(B). The college was accorded autonomous status in 2013 by the University Grants Commission, Government of Karnataka & the Bengaluru North University. The National Assessment and Accreditation Council (NAAC) has accredited Kristu Jayanti College (Autonomous), now Kristu Jayanti University, with A++ grade. The college (now University) has been rated with a cumulative grade point average (CGPA) of 3.78 out of 4 in the third cycle of accreditation. It is the second institution in the country and the first in Karnataka to achieve the highest CGPA. KJU was ranked 60th among colleges in India by the National Institutional Ranking Framework in 2024</p>
+
+    <p>'Light and Prosperity': To provide intellectual and moral leadership by igniting the minds of youth to realize their potential and make positive contributions leading to prosperity of the society and the nation at large.</p>
+    <p id="para2">To provide educational opportunities to all aspiring youth to excel in life by nurturing academic excellence, fostering values, creating civic responsibility, inculcating environmental concern and building global competencies in a dynamic environment.</p>
+    <br>
+    <h3>Accreditation</h3>
+    <div>
+        <img src="https://kristujayanti.edu.in/images/high/A++.png" alt="">
+        <img src="https://kristujayanti.edu.in/images/high/nirf-60.png" alt="">
+        <img src="https://kristujayanti.edu.in/images/high/3.png" alt="">
+        <img src="https://kristujayanti.edu.in/images/high/5.png" alt="">
+        <img src="https://kristujayanti.edu.in/images/high/15+students.png" alt="">
+    </div>
+    <br>
+    <h3>Placements</h3>
+    <p>Kristu Jayanti College (Deemed to be University) has a strong placement record, with students regularly getting placed in reputed companies according to Kristu Jayanti College's placement page. The college actively supports students through its Career Counselling and Placement Cell (CECR), providing career guidance and preparing them for placements. </p>
+    <mark><h1><a href="https://www.kristujayanti.edu.in/admission/admission.php">For Admission </a></h1></mark>
+
+    <div>
+    <table id="studentData">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Niyas</td>
+                <td>21</td>
+                <td>MCA</td>
+                <td rowspan="2">70</td>
+                <td rowspan="2">50</td>
+                
+            </tr>
+            <tr>
+                <td>Abdullah</td>
+                <td>20</td>
+                <td>MCA</td>
+         
+            </tr>
+            <tr>
+                <td>An24</td>
+                <td>20</td>
+                <td>MCA</td>
+                <td colspan="2">60</td>
+                
+            </tr> 
+        </tbody>
+    </table>
+    </div> 
+    <footer>
+    <div class="footer1">
+    
+        <strong><h3 style="margin-left: 50px;">Company</h3></strong><br>
+        <div id="para3">
+            <p>About us</p>
+            <p>Our Services</p>
+            <p>Privacy Policy</p>
+            <p>Affiliate Program</p>
+        </div>
+
+        <strong><h3 style="margin-left: 50px;">Get help</h3></strong><br>
+        <div id="para3">
+            <p>FAQ</p>
+            <p>Shipping</p>
+            <p>Returns</p>
+            <p>Order Status</p>
+            <p>Payment Options</p>
+        </div>
+
+        <strong><h3 style="margin-left: 50px;">Online Shop</h3></strong><br>
+        <div id="para3">
+            <p>Watch</p>
+            <p>Bag</p>
+            <p>Shoes</p>
+            <p>Dress</p>
+        </div>
+
+        
+    </div>
+    </footer>
+</body>
+</ht
