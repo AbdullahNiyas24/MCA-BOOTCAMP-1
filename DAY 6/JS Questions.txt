@@ -370,7 +370,36 @@ console.log("Number not found")
 }
 
 output- 7
+------------------------------------------------
+// function printText(text)
+// {
+//   console.log("The given text is "+ text)
+// }
+// printText("Niyas")
 
+// function printText(text)
+// {
+//   console.log("The given text is:" + text)
+// }
+// let arr=["abdullah","niyas","an24","abd"];
+// for(let i=0;i<arr.length;i++){
+//   printText(arr[i])
+//} 
+
+
+// let myNum=()=>{         //function 1.1
+//   console.log(10);
+//   console.log(20);
+// }
+// myNum();
+
+// let myNum=()=> 100
+
+let myNum=()=>{
+  return 200;
+}
+console.log(myNum());
+------------------------------------------------
 
 
 
