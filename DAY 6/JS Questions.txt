@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let a=5; //swapping a to b and b to a 
 let b=2;
 let c;
@@ -405,3 +406,383 @@ console.log(myNum());
 
 
 
+=======
+let a=5; //swapping a to b and b to a 
+let b=2;
+let c;
+
+c=a;
+a=b;
+b=c;
+console.log(b);
+console.log(a);
+console.log(c);
+
+output- 2 5 5
+-------------------------------------------
+
+let a=123; // reversing a number
+let c=123%10; //c=3
+console.log(c);
+a=a/10; //a=123/10=12...
+c=a%10; //c=12/10=
+console.log(Math.floor(c));
+a=a/10; //a=12/10=1
+c=a%10; //110
+console.log(Math.floor(c));
+
+output- 3 2 1
+-------------------------------------------
+
+let a=10; //positive and negative using if-
+if (a>0)
+{
+  console.log("The value of a is positive")
+} 
+else if (a==0)
+{
+  console.log("The value of a is zero")
+}
+else {
+  console.log("The value of a is negative")
+}
+
+output- The value of a is positive
+-------------------------------------------
+
+let a=10; //array problem
+//array variable
+let arr=[1,2,3,"Dharaneesh",1.5,"19bit074"];
+console.log(arr[2])
+
+//key and value pair
+//object variable
+let obj={
+  name:"Dharaneesh",
+  phno:"9790642068",
+  email:"dhaarneeshselvaraj@gmail.com",
+  exp:1.5
+}
+
+//array of objects
+let arrobj=[
+  {
+  name:"Dharaneesh",
+  phno:"9790642068",
+  email:"dhaarneeshselvaraj@gmail.com",
+  exp:1.5
+},
+{
+  name:"Naveen",
+  phno:"9790642068",
+  email:"dhaarneeshselvaraj@gmail.com",
+  exp:1.5
+},
+{
+  name:"Rahul",
+  phno:"9790642068",
+  email:"dhaarneeshselvaraj@gmail.com",
+  exp:1.5
+}
+  ]
+  
+console.log(arrobj[2])
+
+output- 3
+{
+  name: 'Rahul',
+  phno: '9790642068',
+  email: 'dhaarneeshselvaraj@gmail.com',
+  exp: 1.5
+}
+--------------------------------------------
+
+console.log("Numbers from 1 to 5:") // numbers from 1 to 5
+let i=1;
+for (i=1; i<=5; i++){
+  console.log(i)
+}
+
+console.log("Odd Numbers:") //odd numbers
+for (i=1;i<=10;i++){
+  if (i%2 != 0){
+    console.log(i)
+  }
+}
+
+console.log("Even Numbers:") //even numbers
+for (i=1;i<=10;i++){
+  if(i%2 ==0){
+    console.log(i)
+  }
+}
+
+console.log("Multiple of 5:") //5 tables
+i=1;
+for(i=1;i<=10;i++){
+  console.log(5*i)
+}
+
+console.log("Sum:") //sum of numbers
+let sum=0;
+let t=5;
+for (i=1;i<=t;i++){
+  sum=sum+i;
+  console.log(sum)
+}
+
+output- Numbers from 1 to 5:
+1
+2
+3
+4
+5
+Odd Numbers:
+1
+3
+5
+7
+9
+Even Numbers:
+2
+4
+6
+8
+10
+Multiple of 5:
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+Sum:
+1
+3
+6
+10
+15
+--------------------------------------
+
+let arr=[10,23,32,78,32,87,90,32,87,86]; //searching number of the index
+let search = 32;
+let check =1;
+
+for (let i=9; i>0; i--){
+  if (arr[i]==search){
+    check=0;
+    console.log(i);
+    break;
+  }
+}
+if (check){
+  console.log("Number not found")
+}
+
+output- 7
+-----------------------------------------
+
+let a=274; //reversing a value
+let sum=0;
+
+let c=a%10; //c=3
+sum=sum*10+c;
+//sum=0*10+3
+//sum=3
+a=Math.floor(a/10); //a=12
+c=a%10; //c=2
+sum=sum*10+c;
+//sum=3*10+2
+//sum=32
+a=Math.floor(a/10); //a=1
+c=a%10; //c=1
+sum=sum*10+c;
+//sum=320+1
+//sum=321
+console.log(sum);
+
+output- 472
+-----------------------------------------
+
+let a=0; //checking a value by if
+if (a>0)
+{
+console.log("The value of  is positive")
+}
+else if(a==0)
+{
+console.log("The value of a is zero")
+}
+else{
+console.log("The value of a is negative")
+}
+
+output- The value of a is zero
+--------------------------------------------
+
+let a=7; //odd number
+if(a%2==0){
+console.log("the value is even");
+}
+else {
+console.log("The value is odd");
+}
+
+output- The value is odd
+--------------------------------------------
+
+let a=10; //even number
+if(a%2==0){
+console.log("the value is even");
+}
+else {
+console.log("The value is odd");
+}
+
+output- the value is even
+---------------------------------------------
+
+let a=10, b=20; //swapping
+a=a+b; //50
+b=50-40;
+a=50-30
+console.log("The value of a is ",a);
+console.log("The value of b is ",b);
+
+output- The value of a is 20
+the value of b is 10
+--------------------------------------------
+
+let a=10,b=15,c=12;
+if (a>b && a>c)
+{
+console.log("A is greater");
+}
+else if(b<c && b>a)
+{
+console.log("B is greater");
+}
+else{
+console.log("C is greater");
+}
+
+output- c is greater
+--------------------------------------------
+
+let a=110,b=15,c=400; //ternary operator
+(a>b && a>c)? console.log("A is greater");
+(b>a && b>c)? console.log("B is greater") : console.log("c is greater");
+
+output- A is greater
+--------------------------------------------
+
+for(var i=0;;){
+if(i>5){
+break
+}
+i++;
+}
+console.log(i);
+
+output- 6
+--------------------------------------------
+
+let a=10;
+//array variable
+let arr=[1,2,3,"Niyas",1,"22csmm86"];
+
+//key and value pair
+//object variable
+let obj={
+name:"Abdullah",
+phone:"9206590594",
+email:"abdullah@gmail.com",
+exp:2
+}
+//array of objects
+let arrobj=[
+{
+name:"Abdullah",
+phone:"9206590594",
+email:"abdullah@gmail.com",
+exp:2
+},
+{
+name:"niyas",
+phone:"9206590595",
+email:"niyas@gmail.com",
+exp:2.5
+},
+{
+name:"An24",
+phone:"9206590596",
+email:"an24@gmail.com",
+exp:1
+}
+]
+for(let i=0; i<arrobj.length;i++){
+console.log(arrobj[i].name)
+}
+
+output- Abdullah
+niyas
+An24
+------------------------------------------
+
+let arr=[10,23,56,32];
+let search =23;
+for(let i=0;i<4;i++){
+if(arr[i]==search){
+console.log(i);
+break;
+}
+}
+
+output- 1
+--------------------------------------------
+
+let arr=[10,23,56,32];
+let search =23;
+let check=1;
+
+for(let i=0;i<4;i++){
+if(arr[i]==search){
+check=0;
+console.log(i);
+break;
+}
+}
+if(check){
+console.log("Number not found")
+}
+
+output- 1
+----------------------------------------------
+
+let arr=[10,23,32,78,87,90,32,87,86];
+let search=32;
+let check=1;
+
+for(let i=9;i>0;i--){
+if(arr[i]==search){
+check=0;
+console.log(i);
+break;
+}
+}
+if(check){
+console.log("Number not found")
+}
+
+output- 7
+
+
+
+
+
+
+>>>>>>> 7502b4e5886c3ece6ce7d9aa81effe868b044c72
