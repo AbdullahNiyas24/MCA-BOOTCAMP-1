@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Landing page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-... (SRI hash from cdnjs)" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" />
     <style>
         *{
             margin: 0;
             font-family: "Inter", "Roboto", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
         }
+        /* prevent sideways scroll on small screens */
+        body { overflow-x: hidden; }
+
         #container{
             background-image: url(/img/sm1.jpg);
             height: 100vh;
@@ -18,6 +21,7 @@
             position: relative;
             transition: 1s;
             margin-left: 100px;
+            background-position: center;
         }
         .mini img{
             height: 60px;
@@ -35,6 +39,7 @@
             position: absolute;
             top: 50%;
             left: 120px;
+            cursor: pointer;
         }
         #arrow2 {
             height: 40px;
@@ -43,6 +48,7 @@
             top: 50%;
             right: 10px;
             rotate: 180deg;  
+            cursor: pointer;
         }
         .mini img:hover{
             transform: scale(1.1);
@@ -62,33 +68,17 @@
             z-index: 1; 
             padding-bottom: 100%;
         }
-        .one :hover{
-            color: white;
-        }
-        .two :hover{
-            color: white;
-        }
-        .three :hover{
-            color: white;
-        }
-        .four :hover{
-            color: white;
-        }
-        .five :hover{
-            color: white;
-        }
-        .six :hover{
-            color: white;
-        }
-        .seven :hover{
-            color: white;
-        }
-        .eight :hover{
-            color: white;
-        }
-        .big{
-            display: flex;
-        }
+        .one :hover{ color: white; }
+        .two :hover{ color: white; }
+        .three :hover{ color: white; }
+        .four :hover{ color: white; }
+        .five :hover{ color: white; }
+        .six :hover{ color: white; }
+        .seven :hover{ color: white; }
+        .eight :hover{ color: white; }
+
+        .big{ display: flex; }
+
         .side img{
             padding-bottom: 80px;
             margin-top: 20px;
@@ -122,30 +112,25 @@
             transform: scale(1.1);
             transition: 0.5s;
         }
-       .text1, .text2, .text3, .text4{
-        padding-top: 50px;
-       }
-       .img2 :hover {
-         transform: scale(1.1);
-         transition: 0.5s;
-       }
-       .img3 :hover{
-         transform: scale(1.1);
-         transition: 0.5s;
-       }
-       .img4 :hover{
-         transform: scale(1.1);
-         transition: 0.5s;
-       }
-       .img5 :hover{
-         transform: scale(1.1);
-         transition: 0.5s;
-       }
+        .text1, .text2, .text3, .text4{
+            padding-top: 50px;
+        }
+        .img2 :hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        .img3 :hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
         .main img {
-        border-radius: 3px;
-       }
-       
-       .footer1{
+            border-radius: 3px;
+        }
+        .img4 :hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        .footer1{
             background-color: #0f1014;
             color: white;
             padding-top: 100px;
@@ -159,29 +144,111 @@
         .foot4{
             text-align: center;
         }
-       .footer {
+        .footer {
             background-color: #0f1014;
             color: white;
             margin-left: 100px;
             padding-top: 40px;
-       }
-       .foot5{
+        }
+        .foot5{
             color: gray;
             margin-left: 30px;
-       }
-       .foot4{
+        }
+        .foot4{
             width: 20%;
-       }
-       .foot5 ul{
+        }
+        .foot5 ul{
             list-style-type: none;
             padding: 0;
-       }
-       .foot{
+        }
+        .foot{
             display: flex;
-       }
-       .foot6{
+        }
+        .foot6{
             margin-left: 700px;
-       }
+        }
+
+        /* Make images shrink properly on small screens */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ===================== MOBILE (≤768px) ===================== */
+        @media (max-width: 768px) {
+            /* keep sidebar but smaller (no behavior change) */
+            .side { width: 60px; }
+
+            /* match content offset */
+            #container { margin-left: 60px; }
+            .main, .footer { margin-left: 60px; }
+
+            /* button responsive only on mobile */
+            .button {
+                width: 80%;
+                left: 10%;
+                top: 70%;
+                padding: 15px;
+            }
+
+            /* easier reading/stacking */
+            .text {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* make image rows wrap into a simple grid */
+            .img, .img2, .img3, .img4 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            /* footer stacks */
+            .footer1, .foot {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .foot6 {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            /* bring left arrow in a bit on narrow screens (layout only) */
+            #arrow1 { left: 20px; }
+        }
+
+        /* ===================== VERY SMALL (≤480px) ===================== */
+        @media (max-width: 480px) {
+            /* if you prefer to hide the sidebar entirely on tiny phones, uncomment: */
+            /* .side { display: none; } 
+               #container, .main, .footer { margin-left: 0; } 
+            */
+
+            /* single column images */
+            .img, .img2, .img3, .img4 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .mini {
+    display: flex;
+    flex-wrap: wrap;      /* wrap into next line */
+    justify-content: center;
+    gap: 8px;             /* nice spacing between items */
+  }
+
+  .mini img {
+    width: 30%;           /* 3 images per row */
+    border-radius: 8px;   /* rounded corners like Hotstar */
+  }
+}
+
     </style>
 </head>
 <body>
@@ -214,6 +281,7 @@
             <button class="button">Watch First Episode</button>
         </div>
     </div>
+
     <div class="main">
         <div class="text">
             <h3>Episodes</h3>
@@ -269,15 +337,14 @@
         <div class="text4">
             <h3>Popular Languages</h3><br>
         </div>
-        <div class="img5">
-            <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563" alt="" height="130px" width="240px">
-            <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae" alt="" height="130px" width="240px">
-            <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" height="130px" width="240px">
-            <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/8124/1714043448124-a" alt="" height="130px" width="240px">
-            <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6672/1526672-a-eafe6913c6c8" alt="" height="130px" width="240px">
-        </div>
 
+        <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563" alt="" height="130px" width="240px">
+        <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae" alt="" height="130px" width="240px">
+        <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" height="130px" width="240px">
+        <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/8124/1714043448124-a" alt="" height="130px" width="240px">
+        <img src="https://img.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/6672/1526672-a-eafe6913c6c8" alt="" height="130px" width="240px">
     </div>
+
     <div class="footer">
         <div class="footer1">
             <div class="foot1">
@@ -318,9 +385,9 @@
                 <img src="https://img.hotstar.com/image/upload/f_auto,q_90,w_256/v1661346071/ios-appstore" alt="" height="40px" width="120px">
             </div>
         </div>
-            <br>
+        <br>
     </div>
-    <script src="landing.js">
-    </script>
+
+    <script src="landing.js"></script>
 </body>
 </html>
